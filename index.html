@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheetBuilder</title>
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="container-fluid min-vh-100 bg-warning text-black p-3 font-monospace" style="--bs-bg-opacity: .25">
+        <div class=" container">
+            <h1 class="display-4 fw-bold">RPG Character Sheet Builder</h1>
+            <p class="lead">Create your own character sheet for your RPG adventures!</p>
+        </div>
+        <div class="container bg-warning-subtle border border-danger">
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3"> <!-- name -->
+                        <label for="name" class="form-label">Whats ur character name?</label>
+                        <input type="email" class="form-control w-50" id="name" placeholder="Insert name here">
+                    </div>
+                </div>
+                <div class="col m-3 border border-danger">
+                    <div class="mb-3">
+                        <div class="row text-center"> <label for="">Credits: <span id="cCred">0</span> <input
+                                    type="button" class="btn " value="+" onclick="addCredits()"> <input type="button"
+                                    class="btn" value="-" onclick="removeCredits()"></label> </div>
+                        <div class="row text-center"> <label for="">Points: <span>0</span></label> </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col"> <!-- Occupation-->
+                    <div class="mb-3">
+                        <label for="occupation" class="form-label">What's your occupation?</label>
+                        <select class="form-control w-50 bg-white-subtle text-black" id="occupation"
+                            style="--bs-bg-opacity: .50" onchange="occupation(this.value)">
+                            <option selected>Select an occupation</option>
+                            <option value="1">Alienista</option>
+                            <option value="2">Antiquario</option>
+                            <option value="3">Andarilho</option>
+
+                        </select>
+
+                        <!-- display occupation details -->
+                        <div id="occupation-details">
+                            show your occupation details here
+                            <div class="card" id="occupation-card" style="--bs-bg-opacity: .50">
+                                <div class="card-body bg-white text-black ">
+                                    <img src="" alt="occupation representation" class="card-img-top"
+                                        id="occupation-image">
+                                    <h5 class="card-title" id="occupation-name">Occupation Name</h5>
+                                    <p class="card-text" id="occupation-description">Occupation description and details
+                                        go here.</p>
+                                    <p class="card-text"> Credits: <span id="occupation-credits">0</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col m-3"> <!-- Motivations-->
+                    <label for="" class="">
+                        Select your motivations: (up to 3)
+                    </label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="1"
+                            onclick="limitCheckboxes(this, 3)">
+                        <label class="form-check-label" for="1">
+                            Motivation 1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="2 "
+                            onclick="limitCheckboxes(this, 3)">
+                        <label class="form-check-label" for="2 ">
+                            Motivation 2
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="3"
+                            onclick="limitCheckboxes(this, 3)">
+                        <label class="form-check-label" for="3">
+                            Motivation 3
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="4"
+                            onclick="limitCheckboxes(this, 3)">
+                        <label class="form-check-label" for="4">
+                            Motivation 4
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row border border-danger mb-3">
+                <label for="" class="text-center"> Habilidades Investigativas</label>
+                <div class="col">
+                    <label for="Academicas" class="text-black text-center">Academicas</label>
+                    <div class="col">
+                        <label for="acad1" class="">
+                            acad1
+                            <input type="button" class="btn btn-outline-primary" value="+" onclick="addAcademicas()">
+                            <label class="" id="aca1">0</label>
+                            <input type="button" class="btn btn-outline-primary" value="-" onclick="removeAcademicas()">
+                        </label>
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="interpessoais" class="text-black text-center">Interpessoais</label>
+                    <div class="col">
+                        <label for="in1">
+                            in1
+                            <label for="">
+                                <input type="button" value="+" class="btn btn-outline-primary" onclick="addInter()">
+                            </label>
+                        </label>
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="Tecnicas" class="text-black text-center">Técnicas</label>
+                </div>
+            </div>
+            <div class="row border border-danger mb-3">
+                <label for="" class="text-center"> Habilidades Gerais</label>
+                <div class="col mb-3">
+                    <label for="g1" class="">
+                        Psicanalise
+                        <label class=""> <input type="button" class="btn btn-outline-primary" value="+"
+                                onclick="addPsicanalise()"> <span id="g1">0</span> <input type="button"
+                                class="btn btn-outline-primary" value="-" onclick="removePsicanalise()"></label>
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-end m-3">made by john</div>
+    </div>
+</body>
+
+</html>
