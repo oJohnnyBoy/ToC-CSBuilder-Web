@@ -1,4 +1,4 @@
-var name = document.getElementById("name").value;
+
 // DATA 
 const OCUPATIONS = [
     {
@@ -24,6 +24,7 @@ const OCUPATIONS = [
             "Pode usar Avaliar Honestidade como psicologia forense para construir perfis criminais.",
             "Pode gastar Pontos de Criação para utilizar a habilidade Hipnose.",
         ],
+        img: "assets/alienista.jpg"
     },
     {
         name: "Antiquário",
@@ -37,7 +38,7 @@ const OCUPATIONS = [
             "História da Arte",
             "Idiomas",
             "Usar Biblioteca",
-            "uma Habilidade Investigativa como especialidade pessoal",
+            "uma Habilidade General como especialidade pessoal",
         ],
         credito: [2, 5],
         specialSkills: [
@@ -78,7 +79,7 @@ const OCUPATIONS = [
             "Idiomas",
             "Primeiros Socorros",
             "Usar Biblioteca",
-            "duas outras Habilidades Investigativas (à escolha)",
+            "duas outras Habilidades Generals (à escolha)",
         ],
         credito: [4, 5],
         specialSkills: [
@@ -399,54 +400,19 @@ const OCUPATIONS = [
     },
 ];
 
-const MOTIVATIONS = [
-    "Antiquarianismo",
-    "Arrogância",
-    "Aventura",
-    "Choque Repentino",
-    "Curiosidade",
-    "Dever",
-    "Intelectual",
-    "Má Sorte",
-    "No Sangue",
-    "Sede de Conhecimento",
-    "Seguidor",
-    "Sensibilidade Artística",
-    "Tédio",
-    "Vingança",
-];
 
 //---------------- Functions
 
 //-----geral
-function addPsicanalise() {
-    var psicanalise = document.getElementById("g1");
-    psicanalise.innerHTML = parseInt(psicanalise.innerHTML) + 1;
-}
 
-function removePsicanalise() {
-    var psicanalise = document.getElementById("g1");
-    if (psicanalise.innerHTML > 0) {
-        psicanalise.innerHTML = parseInt(psicanalise.innerHTML) - 1;
-    }
+function handleAddButton(tag) {
+    var add = document.getElementById(tag);
+    add.innerHTML = parseInt(add.innerHTML) + 1;
 }
-//-----interpessoais
-function addInter() {
-    return null;
-}
-
-//-----tecnicas
-
-//-----academicas
-function addAcademicas() {
-    var academicas = document.getElementById("aca1");
-    academicas.innerHTML = parseInt(academicas.innerHTML) + 1;
-}
-
-function removeAcademicas() {
-    var academicas = document.getElementById("aca1");
-    if (academicas.innerHTML > 0) {
-        academicas.innerHTML = parseInt(academicas.innerHTML) - 1;
+function handleRemoveButton(tag) {
+    var remove = document.getElementById(tag);
+    if (remove.innerHTML > 0) {
+        remove.innerHTML = parseInt(remove.innerHTML) - 1;
     }
 }
 
@@ -463,54 +429,123 @@ function limitCheckboxes(checkbox, limit) {
     }
 }
 
-function occupation(occupation) {
 
+function occupation(occupation) {
     switch (occupation) {
         case "1":
-            document.getElementById("occupation-name").innerText = "aba";
+            document.getElementById("occupation-name").innerText = OCUPATIONS[0].name;
+            document.getElementById("occupation-image").src = "assets/1.jpg";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[0].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[0].credito;
             break;
         case "2":
-            document.getElementById("occupation-name").innerText = "abb";
+            document.getElementById("occupation-name").innerText = OCUPATIONS[1].name;
+            document.getElementById("occupation-image").src = "assets/2.jpg";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[1].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[1].credito;
             break;
         case "3":
-            document.getElementById("occupation-image").src = "assets/andarilho.png";
+            document.getElementById("occupation-name").innerText = OCUPATIONS[2].name;
+            document.getElementById("occupation-image").src = "assets/3.jpg";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[2].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[2].credito;
             break;
-        case "Arqueólogo":
-            document.getElementById("occupation-image").src = "assets/arqueologo.png";
+        case "4":
+            document.getElementById("occupation-name").innerText = OCUPATIONS[3].name;
+            document.getElementById("occupation-image").src = "assets/4.jpg";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[3].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[3].credito;
             break;
-        case "Artista":
-            document.getElementById("occupation-image").src = "assets/artista.png";
+        case "5":
+            document.getElementById("occupation-name").innerText = OCUPATIONS[4].name;
+            document.getElementById("occupation-image").src = "assets/5.jpg";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[4].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[4].credito;
             break;
-        case "Autor":
-            document.getElementById("occupation-image").src = "assets/autor.png";
+        case "6":
+            document.getElementById("occupation-name").innerText = OCUPATIONS[5].name;
+            document.getElementById("occupation-image").src = "assets/6.jpg";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[5].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[5].credito;
             break;
-        case "Cientista":
-            document.getElementById("occupation-image").src = "assets/cientista.png";
+        case "7":
+            document.getElementById("occupation-name").innerText = OCUPATIONS[6].name;
+            document.getElementById("occupation-image").src = "assets/7.jpg";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[6].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[6].credito;
             break;
-        case "Clero":
-            document.getElementById("occupation-image").src = "assets/clero.png";
+        case "8":
+            document.getElementById("occupation-name").innerText = OCUPATIONS[7].name;
+            document.getElementById("occupation-image").src = "assets/8.jpg";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[7].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[7].credito;
             break;
-        case "Criminoso":
-            document.getElementById("occupation-image").src = "assets/criminoso.png";
+        case "9":
+            document.getElementById("occupation-name").innerText = OCUPATIONS[8].name;
+            document.getElementById("occupation-image").src = "assets/9.jpg";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[8].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[8].credito;
             break;
-        case "Detetive Particular":
-            document.getElementById("occupation-image").src = "assets/detetive_particular.png";
+        case "10":
+            document.getElementById("occupation-name").innerText = OCUPATIONS[9].name;
+            document.getElementById("occupation-image").src = "assets/10.png";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[9].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[9].credito;
             break;
-        case "Detetive Policial":
-            document.getElementById("occupation-image").src = "assets/detetive_policial.png";
+        case "11":
+            document.getElementById("occupation-name").innerText = OCUPATIONS[10].name;
+            document.getElementById("occupation-image").src = "assets/11.jpg";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[10].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[10].credito;
             break;
-        case "Diletante":
-            document.getElementById("occupation-image").src = "assets/diletante.png";
+        case "12":
+            document.getElementById("occupation-name").innerText = OCUPATIONS[11].name;
+            document.getElementById("occupation-image").src = "assets/12.jpg";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[11].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[11].credito;
             break;
-        case "Enfermeira":
-            document.getElementById("occupation-image").src = "assets/enfermeira.png";
+        case "13":
+            document.getElementById("occupation-name").innerText = OCUPATIONS[12].name;
+            document.getElementById("occupation-image").src = "assets/13.png";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[12].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[12].credito;
             break;
-        case "Jornalista":
-            document.getElementById("occupation-image").src = "assets/jornalista.png";
+        case "14":
+            document.getElementById("occupation-name").innerText = OCUPATIONS[13].name;
+            document.getElementById("occupation-image").src = "assets/14.jpg";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[13].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[13].credito;
             break;
-        case "Médico":
-            document.getElementById("occupation-image").src = "assets/medico.png";
+        case "15":
+            document.getElementById("occupation-name").innerText = OCUPATIONS[14].name;
+            document.getElementById("occupation-image").src = "assets/15.gif";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[14].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[14].credito;
             break;
+        case "16":
+            document.getElementById("occupation-name").innerText = OCUPATIONS[15].name;
+            document.getElementById("occupation-image").src = "assets/16.jpg";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[15].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[15].credito;
+            break
+        case "17":
+            document.getElementById("occupation-name").innerText = OCUPATIONS[16].name;
+            document.getElementById("occupation-image").src = "assets/17.jpg";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[16].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[16].credito;
+            break
+        case "18":
+            document.getElementById("occupation-name").innerText = OCUPATIONS[17].name;
+            document.getElementById("occupation-image").src = "assets/18.gif";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[17].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[17].credito;
+            break
+        case "19":
+            document.getElementById("occupation-name").innerText = OCUPATIONS[18].name;
+            document.getElementById("occupation-image").src = "assets/19.jpg";
+            document.getElementById("occupation-description").innerText = OCUPATIONS[18].description;
+            document.getElementById("occupation-credits").innerText = OCUPATIONS[18].credito;
+            break
     }
 
 }

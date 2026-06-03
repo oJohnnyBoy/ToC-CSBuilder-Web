@@ -19,7 +19,7 @@
             <h1 class="display-4 fw-bold">RPG Character Sheet Builder</h1>
             <p class="lead">Create your own character sheet for your RPG adventures!</p>
         </div>
-        <div class="container bg-warning-subtle border border-danger">
+        <div class="container bg-warning-subtle border border-danger-subtle">
             <div class="row">
                 <div class="col">
                     <div class="mb-3"> <!-- name -->
@@ -27,12 +27,20 @@
                         <input type="email" class="form-control w-50" id="name" placeholder="Insert name here">
                     </div>
                 </div>
-                <div class="col m-3 border border-danger">
+                <div class="col mb-3 border border-danger-subtle">
                     <div class="mb-3">
                         <div class="row text-center"> <label for="">Credits: <span id="cCred">0</span> <input
                                     type="button" class="btn " value="+" onclick="addCredits()"> <input type="button"
-                                    class="btn" value="-" onclick="removeCredits()"></label> </div>
-                        <div class="row text-center"> <label for="">Points: <span>0</span></label> </div>
+                                    class="btn" value="-" onclick="removeCredits()">
+                            </label> </div>
+                        <div class="row text-center"> <label for="">Investigative Points: <span
+                                    id='investigativePoints'>18</span> <input type="button" class="btn" value="+"
+                                    onclick="handleAddButton('investigativePoints')"> <input type="button" class="btn"
+                                    value="-" onclick="handleRemoveButton('investigativePoints')"> </label> </div>
+                        <div class="row text-center"><label for="">General Points: <span id="generalPoints">65</span>
+                                <input type="button" class="btn" value="+" onclick="handleAddButton('generalPoints')">
+                                <input type="button" class="btn" value="-"
+                                    onclick="handleRemoveButton('generalPoints')"> </label> </div>
                     </div>
                 </div>
             </div>
@@ -41,13 +49,29 @@
                 <div class="col"> <!-- Occupation-->
                     <div class="mb-3">
                         <label for="occupation" class="form-label">What's your occupation?</label>
+                        <!--Occupation selection-->
                         <select class="form-control w-50 bg-white-subtle text-black" id="occupation"
                             style="--bs-bg-opacity: .50" onchange="occupation(this.value)">
                             <option selected>Select an occupation</option>
                             <option value="1">Alienista</option>
                             <option value="2">Antiquario</option>
                             <option value="3">Andarilho</option>
-
+                            <option value="4">Arqueólogo</option>
+                            <option value="5">Artista</option>
+                            <option value="6">Autor</option>
+                            <option value="7">Cientista</option>
+                            <option value="8">Clero</option>
+                            <option value="9">Criminoso</option>
+                            <option value="10">Detetive Particular</option>
+                            <option value="11">Detetive Policial</option>
+                            <option value="12">Diletante</option>
+                            <option value="13">Enfermeira</option>
+                            <option value="14">Jornalista</option>
+                            <option value="15">Médico</option>
+                            <option value="16">Militar</option>
+                            <option value="17">Parapsicólogo</option>
+                            <option value="18">Piloto</option>
+                            <option value="19">Professor</option>
                         </select>
 
                         <!-- display occupation details -->
@@ -55,8 +79,8 @@
                             show your occupation details here
                             <div class="card" id="occupation-card" style="--bs-bg-opacity: .50">
                                 <div class="card-body bg-white text-black ">
-                                    <img src="" alt="occupation representation" class="card-img-top"
-                                        id="occupation-image">
+                                    <img src="assets/criminoso.jpg" alt="occupation representation"
+                                        class="card-img-top img-fluid w-50 text-center" id="occupation-image">
                                     <h5 class="card-title" id="occupation-name">Occupation Name</h5>
                                     <p class="card-text" id="occupation-description">Occupation description and details
                                         go here.</p>
@@ -70,73 +94,178 @@
                     <label for="" class="">
                         Select your motivations: (up to 3)
                     </label>
-                    <div class="form-check">
+                    <div class="form-check"> <!-- Motivation 1 -->
                         <input class="form-check-input" type="checkbox" value="" id="1"
                             onclick="limitCheckboxes(this, 3)">
                         <label class="form-check-label" for="1">
-                            Motivation 1
+                            Antiquarianismo
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="2 "
                             onclick="limitCheckboxes(this, 3)">
                         <label class="form-check-label" for="2 ">
-                            Motivation 2
+                            Arrogancia
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="3"
                             onclick="limitCheckboxes(this, 3)">
                         <label class="form-check-label" for="3">
-                            Motivation 3
+                            Aventura
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="4"
                             onclick="limitCheckboxes(this, 3)">
                         <label class="form-check-label" for="4">
-                            Motivation 4
+                            Choque Repentino
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="5" onclick="limitCheckboxes(this, 3)">
+                        <label class="form-check-label" for="5">
+                            Curiosidade
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="6" onclick="limitCheckboxes(this, 3)">
+                        <label class="form-check-label" for="6">
+                            Dever
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="7" onclick="limitCheckboxes(this, 3)">
+                        <label class="form-check-label" for="7">
+                            Intelectual
+                        </label>
+                    </div>
+                    <div class="form-check"> <!-- Motivation 8 -->
+                        <input type="checkbox" class="form-check-input" id="8" onclick="limitCheckboxes(this, 3)">
+                        <label class="form-check-label" for="8">
+                            Má Sorte
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="9" onclick="limitCheckboxes(this, 3)">
+                        <label class="form-check-label" for="9">
+                            No Sangue
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="10" onclick="limitCheckboxes(this, 3)">
+                        <label class="form-check-label" for="10">
+                            Sede de Conhecimento
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="11" onclick="limitCheckboxes(this, 3)">
+                        <label class="form-check-label" for="11">
+                            Seguidor
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="12" onclick="limitCheckboxes(this, 3)">
+                        <label class="form-check-label" for="12">
+                            Sensibilidade Artística
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="13" onclick="limitCheckboxes(this, 3)">
+                        <label class="form-check-label" for="13">
+                            Tédio
+                        </label>
+                    </div>
+                    <div class="form-check"> <!-- Motivation 14 -->
+                        <input type="checkbox" class="form-check-input" id="14" onclick="limitCheckboxes(this, 3)">
+                        <label class="form-check-label" for="14">
+                            Vingança
                         </label>
                     </div>
                 </div>
             </div>
-            <div class="row border border-danger mb-3">
+            <!-- Habilidades Investigativas -->
+            <div class="row border border-danger-subtle mb-3">
                 <label for="" class="text-center"> Habilidades Investigativas</label>
                 <div class="col">
                     <label for="Academicas" class="text-black text-center">Academicas</label>
                     <div class="col">
-                        <label for="acad1" class="">
-                            acad1
-                            <input type="button" class="btn btn-outline-primary" value="+" onclick="addAcademicas()">
-                            <label class="" id="aca1">0</label>
-                            <input type="button" class="btn btn-outline-primary" value="-" onclick="removeAcademicas()">
-                        </label>
+                        <p><label for="acad1" class="">
+                            Antropologia
+                            <span id="1-1">0</span>
+                            <input type="button" class="btn btn-outline-danger" value="+"
+                                onclick="handleAddButton('1-1')">
+                            <input type="button" class="btn btn-outline-danger" value="-"
+                                onclick="handleRemoveButton('1-1')">
+                        </label></p>
+                        <p><label for="1-2" class="">
+                            Arqueologia
+                            <span id="1-2">0</span>
+                            <input type="button" class="btn btn-outline-danger" value="+"
+                                onclick="handleAddButton('1-2')">
+                            <input type="button" class="btn btn-outline-danger" value="-"
+                                onclick="handleRemoveButton('1-2')">
+                        </label></p>
+                        <p><label for="1-3" class="">
+                                Arquitetura
+                                <span id="1-3">0</span>
+                                <input type="button" class="btn btn-outline-danger" value="+"
+                                    onclick="handleAddButton('1-3')">
+                                <input type="button" class="btn btn-outline-danger" value="-"
+                                    onclick="handleRemoveButton('1-3')">
+                            </label></p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col"> <!-- Habilidades Interpessoais -->
                     <label for="interpessoais" class="text-black text-center">Interpessoais</label>
                     <div class="col">
-                        <label for="in1">
-                            in1
-                            <label for="">
-                                <input type="button" value="+" class="btn btn-outline-primary" onclick="addInter()">
-                            </label>
-                        </label>
+                        <p><label for="2-1">
+                                in1
+                                <span id="2-1">0</span>
+                                <input type="button" value="+" class="btn btn-outline-danger"
+                                    onclick="handleAddButton('2-1')"> <input type="button"
+                                    class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('2-1')">
+                            </label></p>
+                        <p><label for="2-2">
+                                in2
+                                <span id="2-2">0</span>
+                                <input type="button" value="+" class="btn btn-outline-danger"
+                                    onclick="handleAddButton('2-2')"> <input type="button"
+                                    class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('2-2')">
+                            </label></p>
+                        <p><label for="2-3">
+                                in3
+                                <span id="2-3">0</span>
+                                <input type="button" value="+" class="btn btn-outline-danger"
+                                    onclick="handleAddButton('2-3')"> <input type="button"
+                                    class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('2-3')">
+                            </label></p>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col"> <!-- Habilidades Técnicas -->
                     <label for="Tecnicas" class="text-black text-center">Técnicas</label>
+                    <div class="col">
+                        <p><label for="3-1">
+                                tec1
+                                <span id="3-1">0</span>
+                                <input type="button" value="+" class="btn btn-outline-danger"
+                                    onclick="handleAddButton('3-1')"> <input type="button"
+                                    class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('3-1')">
+                            </label></p>
+                    </div>
                 </div>
             </div>
-            <div class="row border border-danger mb-3">
+            <!-- Habilidades Gerais-->
+            <div class="row border border-danger-subtle mb-3">
                 <label for="" class="text-center"> Habilidades Gerais</label>
                 <div class="col mb-3">
-                    <label for="g1" class="">
-                        Psicanalise
-                        <label class=""> <input type="button" class="btn btn-outline-primary" value="+"
-                                onclick="addPsicanalise()"> <span id="g1">0</span> <input type="button"
-                                class="btn btn-outline-primary" value="-" onclick="removePsicanalise()"></label>
-                    </label>
+                    <p><label for="4-1" class="">
+                            Psicanalise
+                            <label class=""> <span id="4-1">0</span> <input type="button" class="btn btn-outline-danger"
+                                    value="+" onclick="handleAddButton('4-1')"><input type="button"
+                                    class="btn btn-outline-danger" value="-"
+                                    onclick="handleRemoveButton('4-1')"></label>
+                        </label></p>
                 </div>
             </div>
 
