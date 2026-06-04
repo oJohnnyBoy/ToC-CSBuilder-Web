@@ -437,114 +437,152 @@ function occupation(occupation) {
             document.getElementById("occupation-image").src = "assets/1.jpg";
             document.getElementById("occupation-description").innerText = OCUPATIONS[0].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[0].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[0].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[0].ocupationalSkills
             break;
         case "2":
             document.getElementById("occupation-name").innerText = OCUPATIONS[1].name;
             document.getElementById("occupation-image").src = "assets/2.jpg";
             document.getElementById("occupation-description").innerText = OCUPATIONS[1].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[1].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[1].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[1].ocupationalSkills
             break;
         case "3":
             document.getElementById("occupation-name").innerText = OCUPATIONS[2].name;
             document.getElementById("occupation-image").src = "assets/3.jpg";
             document.getElementById("occupation-description").innerText = OCUPATIONS[2].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[2].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[2].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[2].ocupationalSkills
             break;
         case "4":
             document.getElementById("occupation-name").innerText = OCUPATIONS[3].name;
             document.getElementById("occupation-image").src = "assets/4.jpg";
             document.getElementById("occupation-description").innerText = OCUPATIONS[3].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[3].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[3].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[3].ocupationalSkills
             break;
         case "5":
             document.getElementById("occupation-name").innerText = OCUPATIONS[4].name;
             document.getElementById("occupation-image").src = "assets/5.jpg";
             document.getElementById("occupation-description").innerText = OCUPATIONS[4].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[4].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[4].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[4].ocupationalSkills
             break;
         case "6":
             document.getElementById("occupation-name").innerText = OCUPATIONS[5].name;
             document.getElementById("occupation-image").src = "assets/6.jpg";
             document.getElementById("occupation-description").innerText = OCUPATIONS[5].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[5].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[5].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[5].ocupationalSkills
             break;
         case "7":
             document.getElementById("occupation-name").innerText = OCUPATIONS[6].name;
             document.getElementById("occupation-image").src = "assets/7.jpg";
             document.getElementById("occupation-description").innerText = OCUPATIONS[6].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[6].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[6].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[6].ocupationalSkills
             break;
         case "8":
             document.getElementById("occupation-name").innerText = OCUPATIONS[7].name;
             document.getElementById("occupation-image").src = "assets/8.jpg";
             document.getElementById("occupation-description").innerText = OCUPATIONS[7].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[7].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[7].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[7].ocupationalSkills
             break;
         case "9":
             document.getElementById("occupation-name").innerText = OCUPATIONS[8].name;
             document.getElementById("occupation-image").src = "assets/9.jpg";
             document.getElementById("occupation-description").innerText = OCUPATIONS[8].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[8].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[8].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[8].ocupationalSkills
             break;
         case "10":
             document.getElementById("occupation-name").innerText = OCUPATIONS[9].name;
             document.getElementById("occupation-image").src = "assets/10.png";
             document.getElementById("occupation-description").innerText = OCUPATIONS[9].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[9].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[9].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[9].ocupationalSkills
             break;
         case "11":
             document.getElementById("occupation-name").innerText = OCUPATIONS[10].name;
             document.getElementById("occupation-image").src = "assets/11.jpg";
             document.getElementById("occupation-description").innerText = OCUPATIONS[10].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[10].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[10].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[10].ocupationalSkills
             break;
         case "12":
             document.getElementById("occupation-name").innerText = OCUPATIONS[11].name;
             document.getElementById("occupation-image").src = "assets/12.jpg";
             document.getElementById("occupation-description").innerText = OCUPATIONS[11].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[11].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[11].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[11].ocupationalSkills
             break;
         case "13":
             document.getElementById("occupation-name").innerText = OCUPATIONS[12].name;
             document.getElementById("occupation-image").src = "assets/13.png";
             document.getElementById("occupation-description").innerText = OCUPATIONS[12].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[12].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[12].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[12].ocupationalSkills
             break;
         case "14":
             document.getElementById("occupation-name").innerText = OCUPATIONS[13].name;
             document.getElementById("occupation-image").src = "assets/14.jpg";
             document.getElementById("occupation-description").innerText = OCUPATIONS[13].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[13].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[13].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[13].ocupationalSkills
             break;
         case "15":
             document.getElementById("occupation-name").innerText = OCUPATIONS[14].name;
             document.getElementById("occupation-image").src = "assets/15.gif";
             document.getElementById("occupation-description").innerText = OCUPATIONS[14].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[14].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[14].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[14].ocupationalSkills
             break;
         case "16":
             document.getElementById("occupation-name").innerText = OCUPATIONS[15].name;
             document.getElementById("occupation-image").src = "assets/16.jpg";
             document.getElementById("occupation-description").innerText = OCUPATIONS[15].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[15].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[15].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[15].ocupationalSkills
             break
         case "17":
             document.getElementById("occupation-name").innerText = OCUPATIONS[16].name;
             document.getElementById("occupation-image").src = "assets/17.jpg";
             document.getElementById("occupation-description").innerText = OCUPATIONS[16].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[16].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[16].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[16].ocupationalSkills
             break
         case "18":
             document.getElementById("occupation-name").innerText = OCUPATIONS[17].name;
             document.getElementById("occupation-image").src = "assets/18.gif";
             document.getElementById("occupation-description").innerText = OCUPATIONS[17].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[17].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[17].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[17].ocupationalSkills
             break
         case "19":
             document.getElementById("occupation-name").innerText = OCUPATIONS[18].name;
             document.getElementById("occupation-image").src = "assets/19.jpg";
             document.getElementById("occupation-description").innerText = OCUPATIONS[18].description;
             document.getElementById("occupation-credits").innerText = OCUPATIONS[18].credito;
+            document.getElementById("bonus").innerText = OCUPATIONS[18].specialSkills;
+            document.getElementById("bonus-2").innerText = OCUPATIONS[18].ocupationalSkills;
             break
     }
 
