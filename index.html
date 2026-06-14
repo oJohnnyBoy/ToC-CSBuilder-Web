@@ -47,9 +47,9 @@
             <div class="row border border-danger-subtle mb-3 justify-content-center"> <!-- Personal Details -->
                 <div class="col-9"> <!-- Occupation-->
                     <div class="mb-3">
-                        <label for="occupation" class="form-label fs-2">What's your occupation?</label>
+                        <label for="occupation" class="form-label fs-3">What's your occupation?</label>
                         <!--Occupation selection-->
-                        <select class="form-control w-50 bg-white-subtle text-black" id="occupation"
+                        <select class="form-control w-50 bg-white-subtle text-black fs-6" id="occupation"
                             style="--bs-bg-opacity: .50" onchange="occupation(this.value)">
                             <option selected>Select an occupation</option>
                             <option value="1">Alienista</option>
@@ -75,12 +75,11 @@
 
                         <!-- display occupation details -->
                         <div id="occupation-details">
-                            <label class="form-label fs-4">show your occupation details here</label>
-                            <div class="card" id="occupation-card" style="--bs-bg-opacity: .50">
-                                <div class="card-body bg-white text-black ">
+                            <label class="form-label fs-5">show your occupation details here</label>
+                            <div class="card" id="occupation-card" style="--bs-bg-opacity: .50;">
+                                <div class="card-body bg-white text-black" style="max-height: 450px;">
                                     <img src="assets/criminoso.jpg" alt="occupation representation"
-                                        class="card-img-top img-fluid text-center" id="occupation-image"
-                                        style="height: 480px;">
+                                        class="card-img-top img-fluid h-50 w-auto" id="occupation-image">
                                     <h5 class="card-title" id="occupation-name">Occupation Name</h5>
                                     <p class="card-text" id="occupation-description">Occupation description and details
                                         go here.</p>
@@ -92,95 +91,97 @@
                 </div>
             </div>
             <div class="row border border-danger-subtle mb-3 justify-content-center"> <!-- Motivations -->
-                <label for="" class="form-label fs-2 text-center">
+                <label for="" class="form-label fs-3 text-center">
                     Select your motivations: (up to 3)
                 </label>
-                <div class="col-5"> <!-- motivations 1-7 -->
-                    <div class="form-check fs-4"> <!-- Motivation 1 -->
+                <div class="col-3"> <!-- motivations 1-5 -->
+                    <div class="form-check fs-6"> <!-- Motivation 1 -->
                         <input class="form-check-input" type="checkbox" value="" id="1"
                             onclick="limitCheckboxes(this, 3)">
                         <label class="form-check-label" for="1">
                             Antiquarianismo
                         </label>
                     </div>
-                    <div class="form-check fs-4">
+                    <div class="form-check fs-6">
                         <input class="form-check-input" type="checkbox" value="" id="2 "
                             onclick="limitCheckboxes(this, 3)">
                         <label class="form-check-label" for="2 ">
                             Arrogancia
                         </label>
                     </div>
-                    <div class="form-check fs-4">
+                    <div class="form-check fs-6">
                         <input class="form-check-input" type="checkbox" value="" id="3"
                             onclick="limitCheckboxes(this, 3)">
                         <label class="form-check-label" for="3">
                             Aventura
                         </label>
                     </div>
-                    <div class="form-check fs-4">
+                    <div class="form-check fs-6">
                         <input class="form-check-input" type="checkbox" value="" id="4"
                             onclick="limitCheckboxes(this, 3)">
                         <label class="form-check-label" for="4">
                             Choque Repentino
                         </label>
                     </div>
-                    <div class="form-check fs-4">
+                    <div class="form-check fs-6">
                         <input type="checkbox" class="form-check-input" id="5" onclick="limitCheckboxes(this, 3)">
                         <label class="form-check-label" for="5">
                             Curiosidade
                         </label>
                     </div>
-                    <div class="form-check fs-4">
+                </div>
+                <div class="col-3"> <!-- 6-10 -->
+                    <div class="form-check fs-6">
                         <input type="checkbox" class="form-check-input" id="6" onclick="limitCheckboxes(this, 3)">
                         <label class="form-check-label" for="6">
                             Dever
                         </label>
                     </div>
-                    <div class="form-check fs-4">
+                    <div class="form-check fs-6">
                         <input type="checkbox" class="form-check-input" id="7" onclick="limitCheckboxes(this, 3)">
                         <label class="form-check-label" for="7">
                             Intelectual
                         </label>
                     </div>
-                </div>
-                <div class="col-5"> <!-- motivations 8-14 -->
-                    <div class="form-check fs-4"> <!-- Motivation 8 -->
+                    <div class="form-check fs-6">
                         <input type="checkbox" class="form-check-input" id="8" onclick="limitCheckboxes(this, 3)">
                         <label class="form-check-label" for="8">
                             Má Sorte
                         </label>
                     </div>
-                    <div class="form-check fs-4">
+                    <div class="form-check fs-6">
                         <input type="checkbox" class="form-check-input" id="9" onclick="limitCheckboxes(this, 3)">
                         <label class="form-check-label" for="9">
                             No Sangue
                         </label>
                     </div>
-                    <div class="form-check fs-4">
+                    <div class="form-check fs-6">
                         <input type="checkbox" class="form-check-input" id="10" onclick="limitCheckboxes(this, 3)">
                         <label class="form-check-label" for="10">
                             Sede de Conhecimento
                         </label>
                     </div>
-                    <div class="form-check fs-4">
+                </div>
+                <div class="col-3"> <!-- 11 - 14 -->
+                    <div class="form-check fs-6">
                         <input type="checkbox" class="form-check-input" id="11" onclick="limitCheckboxes(this, 3)">
                         <label class="form-check-label" for="11">
                             Seguidor
                         </label>
                     </div>
-                    <div class="form-check fs-4">
+                    <div class="form-check fs-6">
                         <input type="checkbox" class="form-check-input" id="12" onclick="limitCheckboxes(this, 3)">
                         <label class="form-check-label" for="12">
                             Sensibilidade Artística
                         </label>
                     </div>
-                    <div class="form-check fs-4">
+                    <div class="form-check fs-6">
                         <input type="checkbox" class="form-check-input" id="13" onclick="limitCheckboxes(this, 3)">
                         <label class="form-check-label" for="13">
                             Tédio
                         </label>
                     </div>
-                    <div class="form-check fs-4"> <!-- Motivation 14 -->
+                    <div class="form-check fs-6"> <!-- Motivation 14 -->
                         <input type="checkbox" class="form-check-input" id="14" onclick="limitCheckboxes(this, 3)">
                         <label class="form-check-label" for="14">
                             Vingança
@@ -207,290 +208,297 @@
             </div>
 
             <!-- Habilidades Investigativas -->
-            <div class="row border border-danger-subtle mb-3 justify-content-center">
-                <label for="" class="text-center fs-2"> Habilidades Investigativas</label>
+            <div class="row border border-danger-subtle mb-3 justify-content-center" style="height: 600px;">
+                <label for="" class="text-center h-auto fs-5 fw-bold text-uppercase"> Habilidades Investigativas</label>
                 <div class="col-auto"> <!-- Habilidades Academicas -->
-                    <label for="Academicas" class="text-black text-center fs-3">Academicas</label>
-                    <div class="col-auto">
-                        <p><label for="1-1" class="form-label fs-5">
+                    <label for="Academicas"
+                        class="text-black text-center h-auto fs-6 fw-bold text-uppercase">Academicas</label>
+                    <div class="col">
+                        <p><label for="1-1" class="">
                                 Antropologia
                                 <span id="1-1">0</span>
-                                <input type="button" class="btn btn-outline-danger" value="+"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="+"
                                     onclick="handleAddButton('1-1')">
-                                <input type="button" class="btn btn-outline-danger" value="-"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('1-1')">
                             </label></p>
-                        <p><label for="1-2" class="form-label fs-5">
+                        <p><label for="1-2" class="">
                                 Arqueologia
                                 <span id="1-2">0</span>
-                                <input type="button" class="btn btn-outline-danger" value="+"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="+"
                                     onclick="handleAddButton('1-2')">
-                                <input type="button" class="btn btn-outline-danger" value="-"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('1-2')">
                             </label></p>
-                        <p><label for="1-3" class="form-label fs-5">
+                        <p><label for="1-3" class="">
                                 Arquitetura
                                 <span id="1-3">0</span>
-                                <input type="button" class="btn btn-outline-danger" value="+"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="+"
                                     onclick="handleAddButton('1-3')">
-                                <input type="button" class="btn btn-outline-danger" value="-"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('1-3')">
                             </label></p>
-                        <p><label for="1-4" class="form-label fs-5">
+                        <p><label for="1-4" class="">
                                 Biologia
                                 <span id="1-4">0</span>
-                                <input type="button" class="btn btn-outline-danger" value="+"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="+"
                                     onclick="handleAddButton('1-4')">
-                                <input type="button" class="btn btn-outline-danger" value="-"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('1-4')">
                             </label></p>
-                        <p><label for="1-5" class="form-label fs-5">
+                        <p><label for="1-5" class="">
                                 Contabilidade
                                 <span id="1-5">0</span>
-                                <input type="button" class="btn btn-outline-danger" value="+"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="+"
                                     onclick="handleAddButton('1-5')">
-                                <input type="button" class="btn btn-outline-danger" value="-"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('1-5')">
                             </label></p>
-                        <p><label for="1-6" class="form-label fs-5">
+                        <p><label for="1-6" class="">
                                 Criptografia
                                 <span id="1-6">0</span>
-                                <input type="button" class="btn btn-outline-danger" value="+"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="+"
                                     onclick="handleAddButton('1-6')">
-                                <input type="button" class="btn btn-outline-danger" value="-"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('1-6')">
                             </label></p>
-                        <p><label for="1-7" class="form-label fs-5">
+                        <p><label for="1-7" class="">
                                 Direito
                                 <span id="1-7">0</span>
-                                <input type="button" class="btn btn-outline-danger" value="+"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="+"
                                     onclick="handleAddButton('1-7')">
-                                <input type="button" class="btn btn-outline-danger" value="-"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('1-7')">
                             </label></p>
-                        <p><label for="1-8" class="form-label fs-5">
+                        <p><label for="1-8" class="">
                                 Física
                                 <span id="1-8">0</span>
-                                <input type="button" class="btn btn-outline-danger" value="+"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="+"
                                     onclick="handleAddButton('1-8')">
-                                <input type="button" class="btn btn-outline-danger" value="-"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('1-8')">
                             </label></p>
-                        <p><label for="1-9" class="form-label fs-5">
+                        <p><label for="1-9" class="">
                                 Geologia
                                 <span id="1-9">0</span>
-                                <input type="button" class="btn btn-outline-danger" value="+"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="+"
                                     onclick="handleAddButton('1-9')">
-                                <input type="button" class="btn btn-outline-danger" value="-"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('1-9')">
                             </label></p>
-                        <p><label for="1-10" class="form-label fs-5">
+                        <p><label for="1-10" class="">
                                 História da Arte
                                 <span id="1-10">0</span>
-                                <input type="button" class="btn btn-outline-danger" value="+"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="+"
                                     onclick="handleAddButton('1-10')">
-                                <input type="button" class="btn btn-outline-danger" value="-"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('1-10')">
                             </label></p>
-                        <p><label for="1-11" class="form-label fs-5">
+                        <p><label for="1-11" class="">
                                 Idiomas
                                 <span id="1-11">0</span>
-                                <input type="button" class="btn btn-outline-danger" value="+"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="+"
                                     onclick="handleAddButton('1-11')">
-                                <input type="button" class="btn btn-outline-danger" value="-"
+                                <input type="button" class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('1-11')">
                             </label></p>
-                        <p><label for="1-12" class="form-label fs-5">
-                                Medicina
-                                <span id="1-12">0</span>
-                                <input type="button" class="btn btn-outline-danger" value="+"
-                                    onclick="handleAddButton('1-12')">
-                                <input type="button" class="btn btn-outline-danger" value="-"
-                                    onclick="handleRemoveButton('1-12')">
-                            </label></p>
-                        <p><label for="1-13" class="form-label fs-5">
-                                Mythos de Cthulhu
-                                <span id="1-13">0</span>
-                                <input type="button" class="btn btn-outline-danger" value="+"
-                                    onclick="handleAddButton('1-13')">
-                                <input type="button" class="btn btn-outline-danger" value="-"
-                                    onclick="handleRemoveButton('1-13')">
-                            </label></p>
-                        <p><label for="1-14" class="form-label fs-5">
-                                Ocultismo
-                                <span id="1-14">0</span>
-                                <input type="button" class="btn btn-outline-danger" value="+"
-                                    onclick="handleAddButton('1-14')">
-                                <input type="button" class="btn btn-outline-danger" value="-"
-                                    onclick="handleRemoveButton('1-14')">
-                            </label></p>
-                        <p><label for="1-15" class="form-label fs-5">
-                                Teologia
-                                <span id="1-15">0</span>
-                                <input type="button" class="btn btn-outline-danger" value="+"
-                                    onclick="handleAddButton('1-15')">
-                                <input type="button" class="btn btn-outline-danger" value="-"
-                                    onclick="handleRemoveButton('1-15')">
-                            </label></p>
-                        <p><label for="1-16" class="form-label fs-5">
-                                Usar Biblioteca
-                                <span id="1-16">0</span>
-                                <input type="button" class="btn btn-outline-danger" value="+"
-                                    onclick="handleAddButton('1-16')">
-                                <input type="button" class="btn btn-outline-danger" value="-"
-                                    onclick="handleRemoveButton('1-16')">
-                            </label></p>
                     </div>
                 </div>
-                <div class="col-auto"> <!-- Habilidades Interpessoais -->
-                    <label for="interpessoais" class="text-black text-center fs-3">Interpessoais</label>
-                    <div class="col-auto">
-                        <p><label for="2-1" class="form-label fs-5">
+                <div class="col-3"><!-- Habilidades Academicas 2-->
+                    <p></p>
+                    <p><label for="1-12" class="">
+                            Medicina
+                            <span id="1-12">0</span>
+                            <input type="button" class="btn btn-outline-danger btn-sm" value="+"
+                                onclick="handleAddButton('1-12')">
+                            <input type="button" class="btn btn-outline-danger btn-sm" value="-"
+                                onclick="handleRemoveButton('1-12')">
+                        </label></p>
+                    <p><label for="1-13" class="">
+                            Mythos de Cthulhu
+                            <span id="1-13">0</span>
+                            <input type="button" class="btn btn-outline-danger btn-sm" value="+"
+                                onclick="handleAddButton('1-13')">
+                            <input type="button" class="btn btn-outline-danger btn-sm" value="-"
+                                onclick="handleRemoveButton('1-13')">
+                        </label></p>
+                    <p><label for="1-14" class="">
+                            Ocultismo
+                            <span id="1-14">0</span>
+                            <input type="button" class="btn btn-outline-danger btn-sm" value="+"
+                                onclick="handleAddButton('1-14')">
+                            <input type="button" class="btn btn-outline-danger btn-sm" value="-"
+                                onclick="handleRemoveButton('1-14')">
+                        </label></p>
+                    <p><label for="1-15" class="">
+                            Teologia
+                            <span id="1-15">0</span>
+                            <input type="button" class="btn btn-outline-danger btn-sm" value="+"
+                                onclick="handleAddButton('1-15')">
+                            <input type="button" class="btn btn-outline-danger btn-sm" value="-"
+                                onclick="handleRemoveButton('1-15')">
+                        </label></p>
+                    <p><label for="1-16" class="">
+                            Usar Biblioteca
+                            <span id="1-16">0</span>
+                            <input type="button" class="btn btn-outline-danger btn-sm" value="+"
+                                onclick="handleAddButton('1-16')">
+                            <input type="button" class="btn btn-outline-danger btn-sm" value="-"
+                                onclick="handleRemoveButton('1-16')">
+                        </label></p>
+                </div>
+                <div class="col-3"> <!-- Habilidades Interpessoais -->
+                    <label for="interpessoais"
+                        class="text-black text-center h-auto fs-6 text-uppercase fw-bold">Interpessoais</label>
+                    <div class="col">
+                        <p><label for="2-1" class="">
                                 Avaliar Honestidade
                                 <span id="2-1">0</span>
-                                <input type="button" value="+" class="btn btn-outline-danger"
+                                <input type="button" value="+" class="btn btn-outline-danger btn-sm"
                                     onclick="handleAddButton('2-1')"> <input type="button"
-                                    class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('2-1')">
+                                    class="btn btn-outline-danger btn-sm" value='-' onclick="handleRemoveButton('2-1')">
                             </label></p>
-                        <p><label for="2-2" class="form-label fs-5">
+                        <p><label for="2-2" class="">
                                 Bajulação
                                 <span id="2-2">0</span>
-                                <input type="button" value="+" class="btn btn-outline-danger"
+                                <input type="button" value="+" class="btn btn-outline-danger btn-sm"
                                     onclick="handleAddButton('2-2')"> <input type="button"
-                                    class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('2-2')">
+                                    class="btn btn-outline-danger btn-sm" value='-' onclick="handleRemoveButton('2-2')">
                             </label></p>
-                        <p><label for="2-3" class="form-label fs-5">
+                        <p><label for="2-3" class="">
                                 Crédito
                                 <span id="2-3">0</span>
-                                <input type="button" value="+" class="btn btn-outline-danger"
+                                <input type="button" value="+" class="btn btn-outline-danger btn-sm"
                                     onclick="handleAddButton('2-3')"> <input type="button"
-                                    class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('2-3')">
+                                    class="btn btn-outline-danger btn-sm" value='-' onclick="handleRemoveButton('2-3')">
                             </label></p>
-                        <p><label for="2-4" class="form-label fs-5">
+                        <p><label for="2-4" class="">
                                 Barganha
                                 <span id="2-4">0</span>
-                                <input type="button" value="+" class="btn btn-outline-danger"
+                                <input type="button" value="+" class="btn btn-outline-danger btn-sm"
                                     onclick="handleAddButton('2-4')"> <input type="button"
-                                    class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('2-4')">
+                                    class="btn btn-outline-danger btn-sm" value='-' onclick="handleRemoveButton('2-4')">
                             </label></p>
-                        <p><label for="2-5" class="form-label fs-5">
+                        <p><label for="2-5" class="">
                                 Burocracia
                                 <span id="2-5">0</span>
-                                <input type="button" value="+" class="btn btn-outline-danger"
+                                <input type="button" value="+" class="btn btn-outline-danger btn-sm"
                                     onclick="handleAddButton('2-5')"> <input type="button"
-                                    class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('2-5')">
+                                    class="btn btn-outline-danger btn-sm" value='-' onclick="handleRemoveButton('2-5')">
                             </label></p>
-                        <p><label for="2-6" class="form-label fs-5">
+                        <p><label for="2-6" class="">
                                 Convencimento
                                 <span id="2-6">0</span>
-                                <input type="button" value="+" class="btn btn-outline-danger"
+                                <input type="button" value="+" class="btn btn-outline-danger btn-sm"
                                     onclick="handleAddButton('2-6')"> <input type="button"
-                                    class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('2-6')">
+                                    class="btn btn-outline-danger btn-sm" value='-' onclick="handleRemoveButton('2-6')">
                             </label></p>
-                        <p><label for="2-7" class="form-label fs-5">
+                        <p><label for="2-7" class="">
                                 Historia Oral
                                 <span id="2-7">0</span>
-                                <input type="button" value="+" class="btn btn-outline-danger"
+                                <input type="button" value="+" class="btn btn-outline-danger btn-sm"
                                     onclick="handleAddButton('2-7')"> <input type="button"
-                                    class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('2-7')">
+                                    class="btn btn-outline-danger btn-sm" value='-' onclick="handleRemoveButton('2-7')">
                             </label></p>
-                        <p><label for="2-8" class="form-label fs-5">
+                        <p><label for="2-8" class="">
                                 Interrogatório
                                 <span id="2-8">0</span>
-                                <input type="button" value="+" class="btn btn-outline-danger"
+                                <input type="button" value="+" class="btn btn-outline-danger btn-sm"
                                     onclick="handleAddButton('2-8')"> <input type="button"
-                                    class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('2-8')">
+                                    class="btn btn-outline-danger btn-sm" value='-' onclick="handleRemoveButton('2-8')">
                             </label></p>
-                        <p><label for="2-9" class="form-label fs-5">
+                        <p><label for="2-9" class="">
                                 Intimidação
                                 <span id="2-9">0</span>
-                                <input type="button" value="+" class="btn btn-outline-danger"
+                                <input type="button" value="+" class="btn btn-outline-danger btn-sm"
                                     onclick="handleAddButton('2-9')"> <input type="button"
-                                    class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('2-9')">
+                                    class="btn btn-outline-danger btn-sm" value='-' onclick="handleRemoveButton('2-9')">
                             </label></p>
-                        <p><label for="2-10" class="form-label fs-5">
+                        <p><label for="2-10" class="">
                                 Manha
                                 <span id="2-10">0</span>
-                                <input type="button" value="+" class="btn btn-outline-danger"
+                                <input type="button" value="+" class="btn btn-outline-danger btn-sm"
                                     onclick="handleAddButton('2-10')"> <input type="button"
-                                    class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('2-10')">
+                                    class="btn btn-outline-danger btn-sm" value='-'
+                                    onclick="handleRemoveButton('2-10')">
                             </label></p>
-                        <p><label for="2-11" class="form-label fs-5">
+                        <p><label for="2-11" class="">
                                 Trato Policial
                                 <span id="2-11">0</span>
-                                <input type="button" value="+" class="btn btn-outline-danger"
+                                <input type="button" value="+" class="btn btn-outline-danger btn-sm"
                                     onclick="handleAddButton('2-11')"> <input type="button"
-                                    class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('2-11')">
+                                    class="btn btn-outline-danger btn-sm" value='-'
+                                    onclick="handleRemoveButton('2-11')">
                             </label></p>
                     </div>
                 </div>
-                <div class="col-auto"> <!-- Habilidades Técnicas -->
-                    <label for="Tecnicas" class="text-black text-center fs-3">Técnicas</label>
+                <div class="col-3"> <!-- Habilidades Técnicas -->
+                    <label for="Tecnicas" class="text-black text-center fs-6 fw-bold text-uppercase">Técnicas</label>
                     <div class="col">
-                        <p><label for="3-1" class="form-label fs-5">
+                        <p><label for="3-1" class="">
                                 Arrombamento
                                 <span id="3-1">0</span>
                                 <input type="button" value="+" class="btn btn-outline-danger"
                                     onclick="handleAddButton('3-1')"> <input type="button"
                                     class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('3-1')">
                             </label></p>
-                        <p><label for="3-2" class="form-label fs-5">
+                        <p><label for="3-2" class="">
                                 Arte
                                 <span id="3-2">0</span>
                                 <input type="button" value="+" class="btn btn-outline-danger"
                                     onclick="handleAddButton('3-2')"> <input type="button"
                                     class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('3-2')">
                             </label></p>
-                        <p><label for="3-3" class="form-label fs-5">
+                        <p><label for="3-3" class="">
                                 Astronomia
                                 <span id="3-3">0</span>
                                 <input type="button" value="+" class="btn btn-outline-danger"
                                     onclick="handleAddButton('3-3')"> <input type="button"
                                     class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('3-3')">
                             </label></p>
-                        <p><label for="3-4" class="form-label fs-5">
+                        <p><label for="3-4" class="">
                                 Ciência Forence
                                 <span id="3-4">0</span>
                                 <input type="button" value="+" class="btn btn-outline-danger"
                                     onclick="handleAddButton('3-4')"> <input type="button"
                                     class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('3-4')">
                             </label></p>
-                        <p><label for="3-5" class="form-label fs-5">
+                        <p><label for="3-5" class="">
                                 Coletar Evidência
                                 <span id="3-5">0</span>
                                 <input type="button" value="+" class="btn btn-outline-danger"
                                     onclick="handleAddButton('3-5')"> <input type="button"
                                     class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('3-5')">
                             </label></p>
-                        <p><label for="3-6" class="form-label fs-5">
+                        <p><label for="3-6" class="">
                                 Farmácia
                                 <span id="3-6">0</span>
                                 <input type="button" value="+" class="btn btn-outline-danger"
                                     onclick="handleAddButton('3-6')"> <input type="button"
                                     class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('3-6')">
                             </label></p>
-                        <p><label for="3-7" class="form-label fs-5">
+                        <p><label for="3-7" class="">
                                 Fotografia
                                 <span id="3-7">0</span>
                                 <input type="button" value="+" class="btn btn-outline-danger"
                                     onclick="handleAddButton('3-7')"> <input type="button"
                                     class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('3-7')">
                             </label></p>
-                        <p><label for="3-8" class="form-label fs-5">
+                        <p><label for="3-8" class="">
                                 Ofício
                                 <span id="3-8">0</span>
                                 <input type="button" value="+" class="btn btn-outline-danger"
                                     onclick="handleAddButton('3-8')"> <input type="button"
                                     class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('3-8')">
                             </label></p>
-                        <p><label for="3-9" class="form-label fs-5">
+                        <p><label for="3-9" class="">
                                 Química
                                 <span id="3-9">0</span>
                                 <input type="button" value="+" class="btn btn-outline-danger"
                                     onclick="handleAddButton('3-9')"> <input type="button"
                                     class="btn btn-outline-danger" value='-' onclick="handleRemoveButton('3-9')">
                             </label></p>
-                        <p><label for="3-10" class="form-label fs-5">
+                        <p><label for="3-10" class="">
                                 Sobrevivência
                                 <span id="3-10">0</span>
                                 <input type="button" value="+" class="btn btn-outline-danger"
@@ -503,176 +511,205 @@
 
             <!-- Habilidades Gerais-->
             <div class="row border border-danger-subtle justify-content-center">
-                <label for="" class="text-center fs-2"> Habilidades Gerais</label>
-                <div class="col-4"> <!-- Habilidades Gerais 1-12 -->
-                    <p><label for="4-1" class="form-label fs-5">
+                <label for="" class="text-center fs-4 fw-bold"> Habilidades Gerais</label>
+                <div class="col-3"> <!-- Habilidades Gerais 1-6 -->
+                    <p><label for="4-1" class="">
                             Armas Brancas
-                            <label class=""> <span id="4-1">0</span> <input type="button" class="btn btn-outline-danger"
-                                    value="+" onclick="handleAddButton('4-1')"><input type="button"
-                                    class="btn btn-outline-danger" value="-"
+                            <label class=""> <span id="4-1">0</span> <input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-1')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-1')"></label>
                         </label></p>
-                    <p><label for="4-2" class="form-label fs-5">
+                    <p><label for="4-2" class="">
                             Armas de Fogo
-                            <label class=""> <span id="4-2">0</span> <input type="button" class="btn btn-outline-danger"
-                                    value="+" onclick="handleAddButton('4-2')"><input type="button"
-                                    class="btn btn-outline-danger" value="-"
+                            <label class=""> <span id="4-2">0</span> <input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-2')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-2')"></label>
                         </label></p>
-                    <p><label for="4-3" class="form-label fs-5">
+                    <p><label for="4-3" class="">
                             Atletismo
-                            <label class=""> <span id="4-3">0</span> <input type="button" class="btn btn-outline-danger"
-                                    value="+" onclick="handleAddButton('4-3')"><input type="button"
-                                    class="btn btn-outline-danger" value="-"
+                            <label class=""> <span id="4-3">0</span> <input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-3')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-3')"></label>
                         </label></p>
-                    <p><label for="4-4" class="form-label fs-5">
+                    <p><label for="4-4" class="">
                             Briga
-                            <label class=""> <span id="4-4">0</span> <input type="button" class="btn btn-outline-danger"
-                                    value="+" onclick="handleAddButton('4-4')"><input type="button"
-                                    class="btn btn-outline-danger" value="-"
+                            <label class=""> <span id="4-4">0</span> <input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-4')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-4')"></label>
                         </label></p>
-                    <p><label for="4-5" class="form-label fs-5">
+                    <p><label for="4-5" class="">
                             Condução
-                            <label class=""> <span id="4-5">0</span> <input type="button" class="btn btn-outline-danger"
-                                    value="+" onclick="handleAddButton('4-5')"><input type="button"
-                                    class="btn btn-outline-danger" value="-"
+                            <label class=""> <span id="4-5">0</span> <input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-5')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-5')"></label>
                         </label></p>
-                    <p><label for="4-6" class="form-label fs-5">
+                    <p><label for="4-6" class="">
                             Disfarce
-                            <label class=""> <span id="4-6">0</span> <input type="button" class="btn btn-outline-danger"
-                                    value="+" onclick="handleAddButton('4-6')"><input type="button"
-                                    class="btn btn-outline-danger" value="-"
+                            <label class=""> <span id="4-6">0</span> <input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-6')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-6')"></label>
                         </label></p>
-                    <p><label for="4-7" class="form-label fs-5">
+                </div>
+                <div class="col-3"> <!-- 7-12 -->
+                    <p><label for="4-7" class="">
                             Equitação
-                            <label class=""> <span id="4-7">0</span> <input type="button" class="btn btn-outline-danger"
-                                    value="+" onclick="handleAddButton('4-7')"><input type="button"
-                                    class="btn btn-outline-danger" value="-"
+                            <label class=""> <span id="4-7">0</span> <input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-7')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-7')"></label>
                         </label></p>
-                    <p><label for="4-8" class="form-label fs-5">
+                    <p><label for="4-8" class="">
                             Estabilidade
-                            <label class=""> <span id="4-8">1</span> <input type="button" class="btn btn-outline-danger"
-                                    value="+" onclick="handleAddButton('4-8')"><input type="button"
-                                    class="btn btn-outline-danger" value="-"
+                            <label class=""> <span id="4-8">1</span> <input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-8')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-8')"></label>
                         </label></p>
-                    <p><label for="4-9" class="form-label fs-5">
+                    <p><label for="4-9" class="">
                             Explosivos
-                            <label class=""> <span id="4-9">0</span> <input type="button" class="btn btn-outline-danger"
-                                    value="+" onclick="handleAddButton('4-9')"><input type="button"
-                                    class="btn btn-outline-danger" value="-"
+                            <label class=""> <span id="4-9">0</span> <input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-9')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-9')"></label>
                         </label></p>
-                    <p><label for="4-10" class="form-label fs-5">
+                    <p><label for="4-10" class="">
                             Fuga
                             <label class=""> <span id="4-10">0</span> <input type="button"
-                                    class="btn btn-outline-danger" value="+" onclick="handleAddButton('4-10')"><input
-                                    type="button" class="btn btn-outline-danger" value="-"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-10')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-10')"></label>
                         </label></p>
-                    <p><label for="4-11" class="form-label fs-5">
+                    <p><label for="4-11" class="">
                             Furtividade
                             <label class=""> <span id="4-11">0</span> <input type="button"
-                                    class="btn btn-outline-danger" value="+" onclick="handleAddButton('4-11')"><input
-                                    type="button" class="btn btn-outline-danger" value="-"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-11')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-11')"></label>
                         </label></p>
-                    <p><label for="4-12" class="form-label fs-5">
+                    <p><label for="4-12" class="">
                             Hipnose
                             <label class=""> <span id="4-12">0</span> <input type="button"
-                                    class="btn btn-outline-danger" value="+" onclick="handleAddButton('4-12')"><input
-                                    type="button" class="btn btn-outline-danger" value="-"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-12')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-12')"></label>
                         </label></p>
                 </div>
-                <div class="col-4"> <!-- Habilidades Gerais 13-24 -->
-                    <p><label for="4-13" class="form-label fs-5">
+                <div class="col-3"> <!-- 13-18 -->
+                    <p><label for="4-13" class="">
                             Ocultação
                             <label class=""> <span id="4-13">0</span> <input type="button"
-                                    class="btn btn-outline-danger" value="+" onclick="handleAddButton('4-13')"><input
-                                    type="button" class="btn btn-outline-danger" value="-"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-13')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-13')"></label>
                         </label></p>
-                    <p><label for="4-14" class="form-label fs-5">
+                    <p><label for="4-14" class="">
                             Perseguição
                             <label class=""> <span id="4-14">0</span> <input type="button"
-                                    class="btn btn-outline-danger" value="+" onclick="handleAddButton('4-14')"><input
-                                    type="button" class="btn btn-outline-danger" value="-"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-14')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-14')"></label>
                         </label></p>
-                    <p><label for="4-15" class="form-label fs-5">
+                    <p><label for="4-15" class="">
                             Pilotagem
                             <label class=""> <span id="4-15">0</span> <input type="button"
-                                    class="btn btn-outline-danger" value="+" onclick="handleAddButton('4-15')"><input
-                                    type="button" class="btn btn-outline-danger" value="-"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-15')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-15')"></label>
                         </label></p>
-                    <p><label for="4-16" class="form-label fs-5">
+                    <p><label for="4-16" class="">
                             Precaução
                             <label class=""> <span id="4-16">0</span> <input type="button"
-                                    class="btn btn-outline-danger" value="+" onclick="handleAddButton('4-16')"><input
-                                    type="button" class="btn btn-outline-danger" value="-"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-16')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-16')"></label>
                         </label></p>
-                    <p><label for="4-17" class="form-label fs-5">
+                    <p><label for="4-17" class="">
                             Primeiros Socorros
                             <label class=""> <span id="4-17">0</span> <input type="button"
-                                    class="btn btn-outline-danger" value="+" onclick="handleAddButton('4-17')"><input
-                                    type="button" class="btn btn-outline-danger" value="-"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-17')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-17')"></label>
                         </label></p>
-                    <p><label for="4-18" class="form-label fs-5">
+                    <p><label for="4-18" class="">
                             Psicanálise
                             <label class=""> <span id="4-18">0</span> <input type="button"
-                                    class="btn btn-outline-danger" value="+" onclick="handleAddButton('4-18')"><input
-                                    type="button" class="btn btn-outline-danger" value="-"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-18')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-18')"></label>
                         </label></p>
-                    <p><label for="4-19" class="form-label fs-5">
+
+                </div>
+                <div class="col-3"> <!-- 19-24 -->
+                    <p><label for="4-19" class="">
                             Punga
                             <label class=""> <span id="4-19">0</span> <input type="button"
-                                    class="btn btn-outline-danger" value="+" onclick="handleAddButton('4-19')"><input
-                                    type="button" class="btn btn-outline-danger" value="-"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-19')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-19')"></label>
                         </label></p>
-                    <p><label for="4-20" class="form-label fs-5">
+                    <p><label for="4-20" class="">
                             Reparos Elétricos
                             <label class=""> <span id="4-20">0</span> <input type="button"
-                                    class="btn btn-outline-danger" value="+" onclick="handleAddButton('4-20')"><input
-                                    type="button" class="btn btn-outline-danger" value="-"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-20')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-20')"></label>
                         </label></p>
-                    <p><label for="4-21" class="form-label fs-5">
+                    <p><label for="4-21" class="">
                             Reparos Mecânicos
                             <label class=""> <span id="4-21">0</span> <input type="button"
-                                    class="btn btn-outline-danger" value="+" onclick="handleAddButton('4-21')"><input
-                                    type="button" class="btn btn-outline-danger" value="-"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-21')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-21')"></label>
                         </label></p>
-                    <p><label for="4-22" class="form-label fs-5">
+                    <p><label for="4-22" class="">
                             Sanidade
                             <label class=""> <span id="4-22">4</span> <input type="button"
-                                    class="btn btn-outline-danger" value="+" onclick="handleAddButton('4-22')"><input
-                                    type="button" class="btn btn-outline-danger" value="-"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-22')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-22')"></label>
                         </label></p>
-                    <p><label for="4-23" class="form-label fs-5">
+                    <p><label for="4-23" class="">
                             Sentir Perigo
                             <label class=""> <span id="4-23">0</span> <input type="button"
-                                    class="btn btn-outline-danger" value="+" onclick="handleAddButton('4-23')"><input
-                                    type="button" class="btn btn-outline-danger" value="-"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-23')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-23')"></label>
                         </label></p>
-                    <p><label for="4-24" class="form-label fs-5">
+                    <p><label for="4-24" class="">
                             Vitalidade
                             <label class=""> <span id="4-24">1</span> <input type="button"
-                                    class="btn btn-outline-danger" value="+" onclick="handleAddButton('4-24')"><input
-                                    type="button" class="btn btn-outline-danger" value="-"
+                                    class="btn btn-outline-danger btn-sm" value="+"
+                                    onclick="handleAddButton('4-24')"><input type="button"
+                                    class="btn btn-outline-danger btn-sm" value="-"
                                     onclick="handleRemoveButton('4-24')"></label>
                         </label></p>
                 </div>
