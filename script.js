@@ -399,8 +399,6 @@ const OCUPATIONS = [
         ],
     },
 ];
-
-
 //---------------- Functions
 
 //-----geral
@@ -599,3 +597,14 @@ function removeCredits() {
     }
 
 }
+
+// DATA SAVER
+function saveData () {
+    let data = {
+        name: document.getElementById("name").value,
+        occupation: document.getElementById("occupation-name").innerText,
+        credits: document.getElementById("cCred").innerText,
+    };
+    localStorage.setItem("characterData", JSON.stringify(data));
+}
+//DATA LOADER
